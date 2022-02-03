@@ -1,0 +1,59 @@
+💈Alien vs. Predator
+#+PROPERTY: header-args:jupyter-python :session *Py* :results raw drawer :cache no :async yes :exports results :eval yes
+
+* Episode 1
+
+Suite à l'éradication de la pandémie de COVID-19, démarre sur notre planète une
+ère prospère, d'harmonie et de bonheur avec une atmosphère pure à respirer. Deux
+familles d'extra-terrestres, les Aliens et les Prédators, jaloux de cette
+situation, décident d'envahir notre planète dans le but d'y faire prospérer leur
+race. Pour défendre notre écosystème, les GAFA et les BATX ont fourni à chaque
+être humain un smartphone avec une application capable d'éliminer les Aliens
+(AlienKiller) et une application capable d'éliminer les Prédators
+(PredatorEliminator). Malheureusement, il existe un bug majeur sur ces
+applications : L'utilisation de l'application AlienKiller sur un Predator
+améliore l'espérance de vie du Prédator ; L'utilisation de l'application
+PredatorEliminator sur un Alien le rend fécond et ainsi capable de se
+reproduire.  L'avenir de l'espère humaine est donc entre les mains de la Promo 2
+de Rennes de l'école Microsoft IA by Simplon qui doit développer un programme de
+vision par ordinateur capable de distinguer un Alien d'un Prédator et ainsi
+choisir la bonne application à utiliser pour se débarrasser de l'extraterrestre.
+
+Pour cela, utiliser la démarche suivante : Télécharger le dataset adéquat sur le
+répertoire Teams de la promotion ; Implémenter et entrainer un CNN en utilisant
+la librairie Keras.
+
+Son architecture est la suivante :
+layers.Conv2D(filters=16, kernel_size=3, strides=1, activation='relu', input_shape=(150, 150, 3))
+layers.MaxPooling2D(pool_size=(2, 2)) layers.Conv2D(filters=32, kernel_size=3,
+strides=1, activation='relu')
+layers.MaxPooling2D(pool_size=(2, 2))
+layers.Conv2D(filters=64, kernel_size=3, strides=1, activation='relu')
+layers.MaxPooling2D(pool_size=(2, 2))
+layers.Flatten()
+layers.Dense(units=512, activation='relu')
+layers.Dense(units=1, activation='sigmoid')
+
+L'entrainer en mode full batch sur 100 epoch ; Conclure.
+
+** Modalités pédagogiques
+Travail individuel.
+
+** Livrables
+Jupyter Notebooks.
+
+
+
+* Bibliography
+** References
+:PROPERTIES:
+:BEAMER_opt: shrink=10
+:END:
+
+bibliographystyle:unsrt
+bibliography:asvp.bib
+
+* Local Variables                                                  :noexport:
+# Local Variables:
+# eval: (setenv "PATH" "/Library/TeX/texbin/:$PATH" t)
+# End:
